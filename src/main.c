@@ -82,6 +82,8 @@ void destroy_game(void)
 
 int main(int argc, char *argv[])
 {
+	(void)argc;
+    (void)argv;
 	GameRunning = initializeWindow();
 
 	setup_game();
