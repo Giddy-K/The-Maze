@@ -56,4 +56,4 @@ You can now run your program using ./maze (or maze.exe on Windows).
 
 ## Demo
 
-[![The Maze Demo](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/bc961dcd5fb040c7ba1c3d7f5c640acdc2b04a34.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240904%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240904T170321Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=bdd6ed224a47abd88e9285da791c70bb4abcc5ae0ab3bef628d2996849f91b9a)]
+[![The Maze Demo](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/bc961dcd5fb040c7ba1c3d7f5c640acdc2b04a34.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240904%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240904T170321Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=bdd6ed224a47abd88e9285da791c70bb4abcc5ae0ab3bef628d2996849f91b9a)](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/bc961dcd5fb040c7ba1c3d7f5c640acdc2b04a34.gif)
