@@ -14,8 +14,8 @@ To set up SDL2 development libraries on a Windows system using MinGW or a simila
 
 1. Download SDL2 Development Libraries
 
-    Go to the SDL2 official website.
-    Download the development libraries for Windows. Typically, you'll want the "SDL2-devel-2.x.x-mingw.tar.gz" package if you are using MinGW.
+ Go to the SDL2 official website.
+ Download the development libraries for Windows. Typically, you'll want the "SDL2-devel-2.x.x-mingw.tar.gz" package if you are using MinGW.
 
 2. Extract the SDL2 Package
 
