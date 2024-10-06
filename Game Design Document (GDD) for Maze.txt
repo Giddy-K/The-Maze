@@ -1,0 +1,112 @@
+Game Design Document (GDD) for Maze Runner
+1. Game Overview
+Title:
+
+Maze Runner: Escape the Labyrinth
+Genre:
+
+Action-Adventure, Puzzle
+Platform:
+
+PC (Windows, Linux)
+Target Audience:
+
+Teenagers and adults who enjoy action, adventure, and puzzle games.
+Game Concept:
+
+Maze Runner: Escape the Labyrinth immerses players in a thrilling and mysterious environment where they must navigate a constantly changing maze filled with obstacles, enemies, and puzzles. The player assumes the role of a character trying to escape the maze while uncovering the secrets behind it.
+2. Story Synopsis
+
+In a post-apocalyptic world, a group of survivors finds themselves trapped in a mysterious maze created by an unknown force. The maze is filled with deadly traps and aggressive creatures. Players must explore the maze, collect resources, and solve puzzles to escape while uncovering the truth behind the maze's existence and the fate of their friends who went missing within its walls.
+Key Plot Points:
+
+    Introduction: The player wakes up in the maze with no memory of how they got there.
+    Discovery: As players navigate through the maze, they find clues about the maze's origins and the existence of other survivors.
+    Escape Attempts: Players encounter various challenges and enemies, leading to multiple escape attempts, each revealing more about the maze's history.
+    Climax: The player confronts the maze's creator or a significant enemy who reveals their motivations.
+    Conclusion: Depending on the choices made, the player can either escape the maze or succumb to its dangers.
+
+3. Characters
+Player Character:
+
+    Name: Alex (customizable by players)
+    Description: A determined survivor with strong survival instincts. Alex can adapt and learn new skills throughout the game.
+    Abilities: Basic combat skills, puzzle-solving, and resource gathering.
+
+Main Characters:
+
+    Sarah: A skilled technician who provides the player with tools and information about the maze's mechanics. She helps Alex through radio communications.
+    Mark: A brave fighter who helps protect Alex from enemies. He has a tragic backstory, revealing his connection to the maze.
+    The Creator: The antagonist who controls the maze. Their motives are revealed through encounters with Alex and can lead to different outcomes based on the player's choices.
+
+Enemies:
+
+    Grievers: Mutated creatures that patrol the maze. They are fast and aggressive, forcing players to strategize their movements.
+    Traps: Various mechanical traps scattered throughout the maze, including spikes, swinging blades, and pitfall traps.
+
+4. Gameplay Mechanics
+Core Mechanics:
+
+    Exploration: Players navigate through the maze, discovering new areas, solving puzzles, and finding resources.
+    Puzzles: Players must solve environmental puzzles to unlock doors, disable traps, or activate mechanisms.
+    Combat: Players engage in combat with enemies, utilizing a combination of melee and ranged attacks.
+    Stealth: Players can choose to sneak past enemies or distract them to avoid direct confrontation.
+
+Progression:
+
+    Inventory System: Players can collect items that enhance their abilities, such as health kits, weapons, and tools for puzzle-solving.
+    Skill Development: Players can improve their skills based on the choices they make throughout the game, influencing gameplay styles.
+
+5. Level Design
+Maze Structure:
+
+    The maze consists of interconnected rooms and corridors that change dynamically, creating new paths or blocking old ones.
+    Each section of the maze features unique challenges, enemies, and puzzles.
+    Hidden areas contain lore and backstory elements, providing depth to the game world.
+
+Objectives:
+
+    Short-term: Reach specific checkpoints, gather resources, and complete puzzles.
+    Long-term: Uncover the truth behind the maze and escape.
+
+6. User Interface (UI)
+Home Page:
+
+    Start Game
+    Options (audio, graphics, controls)
+    Credits
+    Exit
+
+In-Game UI:
+
+    Health Bar: Displays the player’s health status.
+    Inventory: Shows collected items and equipment.
+    Mini-Map: Provides a visual representation of the maze layout and the player's position.
+
+Menus:
+
+    Pause Menu: Options to resume, restart, or exit the game.
+
+7. Graphics and Sound
+Art Style:
+
+    A blend of realistic and stylized graphics, creating an immersive and mysterious atmosphere.
+    Dark and moody color palettes to enhance the tension and uncertainty of the maze.
+
+Sound Design:
+
+    Ambient sounds that change with the environment (echoes, whispers, distant growls).
+    Sound effects for actions (footsteps, combat noises, puzzle interactions).
+    Background music that intensifies during encounters and calms during exploration.
+
+8. Additional Features
+
+    Multiple Endings: The game offers various endings based on player choices, promoting replayability.
+    Achievements: Players can unlock achievements for completing specific challenges or discovering hidden content.
+
+9. Development Roadmap
+
+    Phase 1: Prototyping core mechanics and level design.
+    Phase 2: Developing characters, story, and environment.
+    Phase 3: Implementing graphics, sound, and UI.
+    Phase 4: Testing, iterating, and finalizing the game for release.
