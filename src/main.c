@@ -82,9 +82,12 @@ void destroy_game(void)
 
 int main(int argc, char *argv[])
 {
-	(void)argc;
-    (void)argv;
+	int section = (argc > 1) ? atoi(argv[1]) : 0;
+
 	GameRunning = initializeWindow();
+
+	if (section >= 1 && section <= 8)
+		loadSection(section);
 
 	setup_game();
 
