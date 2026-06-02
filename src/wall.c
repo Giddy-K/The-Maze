@@ -29,18 +29,21 @@ void renderFloor(int wallBottomPixel, color_t *texelColor, int x)
 {
 	int y, texture_height, texture_width, textureOffsetY, textureOffsetX;
 	float distance, ratio;
+	float cosAngleDiff, sinAngle, cosAngle;
 
 	texture_width = wallTextures[3].width;
 	texture_height = wallTextures[3].height;
+	cosAngleDiff = cos(rays[x].rayAngle - player.rotationAngle);
+	sinAngle = sin(rays[x].rayAngle);
+	cosAngle = cos(rays[x].rayAngle);
 
 	for (y = wallBottomPixel - 1; y < SCREEN_HEIGHT; y++)
 	{
 		ratio = player.height / (y - SCREEN_HEIGHT / 2);
-		distance = (ratio * PROJ_PLANE)
-					/ cos(rays[x].rayAngle - player.rotationAngle);
+		distance = (ratio * PROJ_PLANE) / cosAngleDiff;
 
-		textureOffsetY = (int)abs((distance * sin(rays[x].rayAngle)) + player.y);
-		textureOffsetX = (int)abs((distance * cos(rays[x].rayAngle)) + player.x);
+		textureOffsetY = (int)abs((distance * sinAngle) + player.y);
+		textureOffsetX = (int)abs((distance * cosAngle) + player.x);
 
 		textureOffsetX = (int)(abs(textureOffsetX * texture_width / 30)
 								% texture_width);
@@ -63,20 +66,22 @@ void renderFloor(int wallBottomPixel, color_t *texelColor, int x)
 void renderCeil(int wallTopPixel, color_t *texelColor, int x)
 {
 	int y, texture_width, texture_height, textureOffsetY, textureOffsetX;
+	float distance, ratio;
+	float cosAngleDiff, sinAngle, cosAngle;
 
 	texture_width = wallTextures[3].width;
 	texture_height = wallTextures[3].height;
+	cosAngleDiff = cos(rays[x].rayAngle - player.rotationAngle);
+	sinAngle = sin(rays[x].rayAngle);
+	cosAngle = cos(rays[x].rayAngle);
 
 	for (y = 0; y < wallTopPixel; y++)
 	{
-		float distance, ratio;
-
 		ratio = player.height / (y - SCREEN_HEIGHT / 2);
-		distance = (ratio * PROJ_PLANE)
-					/ cos(rays[x].rayAngle - player.rotationAngle);
+		distance = (ratio * PROJ_PLANE) / cosAngleDiff;
 
-		textureOffsetY = (int)abs((-distance * sin(rays[x].rayAngle)) + player.y);
-		textureOffsetX = (int)abs((-distance * cos(rays[x].rayAngle)) + player.x);
+		textureOffsetY = (int)abs((-distance * sinAngle) + player.y);
+		textureOffsetX = (int)abs((-distance * cosAngle) + player.x);
 
 		textureOffsetX = (int)(abs(textureOffsetX * texture_width / 40)
 								% texture_width);
@@ -86,7 +91,6 @@ void renderCeil(int wallTopPixel, color_t *texelColor, int x)
 		*texelColor = wallTextures[6].
 					  texture_buffer[(texture_width * textureOffsetY) + textureOffsetX];
 		drawPixel(x, y, *texelColor);
-
 	}
 }
 
