@@ -6,8 +6,13 @@
 #include <math.h>
 #include <limits.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <stdbool.h>
 #include "upng.h"
+
+/* Path to the MazeLayouts folder in the Unity project — update to match your setup */
+#define MAZE_LAYOUTS_PATH "../MazeRunner/Assets/Resources/MazeLayouts/"
 
 
 /* Constants */
@@ -58,6 +63,7 @@ bool DetectCollision(float x, float y);
 bool isInsideMap(float x, float y);
 void renderMap(void);
 int getMapValue(int row, int col);
+bool loadSection(int sectionIndex);
 
 /* Functions-variables-structs for player */
 
