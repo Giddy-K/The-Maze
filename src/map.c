@@ -1,6 +1,6 @@
 #include "../headers/header.h"
 
-static const int map[MAP_NUM_ROWS][MAP_NUM_COLS] = {
+static int map[MAP_NUM_ROWS][MAP_NUM_COLS] = {
 	{6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
 	{6, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 6},
 	{6, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 6, 0, 0, 0, 6, 0, 0, 0, 6},
@@ -15,6 +15,54 @@ static const int map[MAP_NUM_ROWS][MAP_NUM_COLS] = {
 	{6, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6},
 	{6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6}
 };
+
+/**
+ * loadSection - loads a maze layout from a CSV file into the map grid
+ * @sectionIndex: section number (1-8)
+ * Return: true on success, false if file not found or malformed
+ */
+
+bool loadSection(int sectionIndex)
+{
+	char filepath[512];
+	FILE *file;
+	char line[256];
+	int row = 0;
+
+	snprintf(filepath, sizeof(filepath), "%ssection_%d.csv",
+		MAZE_LAYOUTS_PATH, sectionIndex);
+
+	file = fopen(filepath, "r");
+	if (!file)
+	{
+		fprintf(stderr, "loadSection: cannot open %s\n", filepath);
+		return (false);
+	}
+
+	while (fgets(line, sizeof(line), file) && row < MAP_NUM_ROWS)
+	{
+		int col = 0;
+		char *token = strtok(line, ",\r\n");
+
+		while (token && col < MAP_NUM_COLS)
+		{
+			map[row][col] = atoi(token);
+			token = strtok(NULL, ",\r\n");
+			col++;
+		}
+		row++;
+	}
+
+	fclose(file);
+
+	if (row != MAP_NUM_ROWS)
+	{
+		fprintf(stderr, "loadSection: expected %d rows, got %d\n",
+			MAP_NUM_ROWS, row);
+		return (false);
+	}
+	return (true);
+}
 
 /**
  * DetectCollision - Checks if there could be a collision
